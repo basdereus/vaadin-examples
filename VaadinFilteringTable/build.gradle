@@ -1,0 +1,28 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+group = 'nl.example.vaadin'
+version = '0.0.1'
+
+repositories {
+	mavenCentral()
+    maven {
+        url 'http://maven.vaadin.com/vaadin-addons'
+    }
+}
+
+sourceCompatibility = 1.6
+    
+dependencies {
+    compile "com.vaadin:vaadin:6.8.2"
+    compile "org.vaadin.addons:filteringtable:0.6.0"
+	testCompile 'junit:junit:4.+'
+}
+	
+task createDirs {
+	sourceSets*.java.srcDirs*.each { it.mkdirs() }
+	sourceSets*.resources.srcDirs*.each { it.mkdirs() }	
+	file(webAppDirName).mkdir()
+}
+
+task wrapper(type: Wrapper)
