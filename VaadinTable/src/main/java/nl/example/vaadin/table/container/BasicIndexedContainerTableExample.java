@@ -19,7 +19,7 @@ public class BasicIndexedContainerTableExample extends CustomComponent {
 	private static String AGE_COLUMN_ID = "age";
 	private static String DATE_COLUMN_ID = "date";
 
-	Table indexedContainerTable; 
+	private Table indexedContainerTable; 
 
 	public BasicIndexedContainerTableExample() {
 		indexedContainerTable = new Table();
@@ -27,8 +27,10 @@ public class BasicIndexedContainerTableExample extends CustomComponent {
 		setCompositionRoot(indexedContainerTable);
 	}
 	
-	/*
+	/**
+	 * 
 	 * Creates a {@link IndexedContainer} with three columns of type String, Integer and Date as example data.
+	 * 
 	 */
 	private static IndexedContainer createExampleData() {
 		String[] fieldNameData = { "Peter", "Alice", "Joshua", "Mike", "Olivia",

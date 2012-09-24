@@ -14,7 +14,7 @@ import com.vaadin.ui.Table;
 public class BasicFilesystemContainerTableExample extends CustomComponent {
 	private static final long serialVersionUID = 1615235309002700490L;
 
-	Table indexedContainerTable; 
+	private Table indexedContainerTable; 
 
 	public BasicFilesystemContainerTableExample() {
 		indexedContainerTable = new Table();
@@ -22,9 +22,11 @@ public class BasicFilesystemContainerTableExample extends CustomComponent {
 		setCompositionRoot(indexedContainerTable);
 	}
 	
-	/*
+	/**
+	 * 
 	 * Creates a {@link FilesystemContainer} with four columns "name", "icon", "size", "last modified" and 
 	 * files of the current directory as example data (not recursive).
+	 * 
 	 */
 	private static FilesystemContainer createExampleData() {
 		final File exampleDir = new File(".");

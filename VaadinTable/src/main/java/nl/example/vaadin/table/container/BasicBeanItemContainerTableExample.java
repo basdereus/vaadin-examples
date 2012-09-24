@@ -17,7 +17,7 @@ import com.vaadin.ui.Table;
 public class BasicBeanItemContainerTableExample extends CustomComponent {
 	private static final long serialVersionUID = 4075473560200820694L;
 
-	Table beanItemContainerTable; 
+	private Table beanItemContainerTable; 
 
 	public BasicBeanItemContainerTableExample() {
 		beanItemContainerTable = new Table();
@@ -25,8 +25,10 @@ public class BasicBeanItemContainerTableExample extends CustomComponent {
 		setCompositionRoot(beanItemContainerTable);
 	}
 	
-	/*
+	/**
+	 * 
 	 * Creates a {@link BeanItemContainer} with two columns "name", "age" as example data.
+	 * 
 	 */
 	private static BeanItemContainer<SimpleBean> createExampleData() {
 
