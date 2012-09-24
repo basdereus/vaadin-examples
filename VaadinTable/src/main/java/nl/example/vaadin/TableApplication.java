@@ -1,9 +1,9 @@
 package nl.example.vaadin;
 
-import nl.example.vaadin.table.BasicBeanContainerTable;
-import nl.example.vaadin.table.BasicBeanItemContainerTable;
-import nl.example.vaadin.table.BasicFilesystemContainerTable;
-import nl.example.vaadin.table.BasicIndexedContainerTable;
+import nl.example.vaadin.table.container.BasicBeanContainerTableExample;
+import nl.example.vaadin.table.container.BasicBeanItemContainerTableExample;
+import nl.example.vaadin.table.container.BasicFilesystemContainerTableExample;
+import nl.example.vaadin.table.container.BasicIndexedContainerTableExample;
 
 import com.vaadin.Application;
 import com.vaadin.ui.Label;
@@ -18,16 +18,16 @@ public class TableApplication extends Application {
 		Window mainWindow = new Window("TableApplication");
 
 		mainWindow.addComponent(new Label("BeanItem Container Table"));
-		mainWindow.addComponent(new BasicBeanItemContainerTable());
+		mainWindow.addComponent(new BasicBeanItemContainerTableExample());
 
 		mainWindow.addComponent(new Label("Bean Container Table"));
-		mainWindow.addComponent(new BasicBeanContainerTable());
+		mainWindow.addComponent(new BasicBeanContainerTableExample());
 
 		mainWindow.addComponent(new Label("Basic IndexedContainer Table"));
-		mainWindow.addComponent(new BasicIndexedContainerTable());
+		mainWindow.addComponent(new BasicIndexedContainerTableExample());
 
 		mainWindow.addComponent(new Label("Basic FilesystemContainer Table"));
-		mainWindow.addComponent(new BasicFilesystemContainerTable());
+		mainWindow.addComponent(new BasicFilesystemContainerTableExample());
 
 		setMainWindow(mainWindow);
 	}
