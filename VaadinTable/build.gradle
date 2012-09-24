@@ -1,0 +1,15 @@
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+group = 'nl.example.vaadin.table'
+version = '0.0.1'
+
+repositories {
+	mavenCentral()
+}
+
+sourceCompatibility = 1.6
+    
+dependencies {
+	compile "com.vaadin:vaadin:6.8.2"
+}
