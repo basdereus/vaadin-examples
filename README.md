@@ -53,8 +53,8 @@ Different Containers
 
 Basic usage of a Filter
 
-- `BasicSimpleStringFilterTableExample` : A Textfield to filter a table (on one column) while typing.
-- `DoubleSimpleStringFilterTableExample` : Two Textfields to filter a table (on two columns) while typing in those two Textfields.
+- `BasicSimpleStringFilterTableExample` : A Textfield to filter a table (on one column) while typing based on the entered String.
+- `DoubleSimpleStringFilterTableExample` : Two Textfields to filter a table (on two columns) while typing those two Textfields.
 - `BasicCustomFilterTableExample` : A Custom filter example resulting in a Textfield accepting a Regular Expression to filter a table (on one column) while typing.
-- `BasicLikeFilterTableExample` : A Like filter to filter a table (on one column) while typing a String or a wildcard of type "%".
-
+- `BasicLikeFilterTableExample` : A Textfield with a Like filter to filter a table (on one column) while typing a String or a wildcard of type "%".
+- `BasicGreaterAndLessFilterTableExample` : A Textfield with a Greater filter to filter a table (on one column) on an (column with an) integer value greater than the entered value. When no integer provided use a Less filter to empty the table. 
