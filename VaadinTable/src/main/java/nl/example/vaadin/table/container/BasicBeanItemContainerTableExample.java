@@ -39,9 +39,8 @@ public class BasicBeanItemContainerTableExample extends CustomComponent {
 		BeanItemContainer<SimpleBean> beanItemContainer = new BeanItemContainer<SimpleBean>(SimpleBean.class);
 
 		for (int i = 0; i < fieldNameData.length; i++) {
-			beanItemContainer.addBean(new SimpleBean(fieldNameData[i], new Random().nextInt(100), new Date()));
+			beanItemContainer.addBean(new SimpleBean(fieldNameData[i], new Random().nextInt(100), new Date((new Random().nextInt(1000)*60*60*24*365*50 + new Date().getTime() - 1000*60*60*24*365*50)))); // random Date between now + or - 50 years.		}
 		}
-		
 		return beanItemContainer;
 	}
 }

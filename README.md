@@ -55,5 +55,6 @@ Basic usage of a Filter
 
 - `BasicSimpleStringFilterTableExample` : A Textfield to filter a table (on one column) while typing.
 - `DoubleSimpleStringFilterTableExample` : Two Textfields to filter a table (on two columns) while typing in those two Textfields.
-- `BasicCustomFilterTableExample` : A Custom Filter example resulting in a Textfield accepting a Regular Expression to filter a table (on one column) while typing.
+- `BasicCustomFilterTableExample` : A Custom filter example resulting in a Textfield accepting a Regular Expression to filter a table (on one column) while typing.
+- `BasicLikeFilterTableExample` : A Like filter to filter a table (on one column) while typing a String or a wildcard of type "%".
 

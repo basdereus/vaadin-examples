@@ -48,7 +48,7 @@ public class BasicIndexedContainerTableExample extends CustomComponent {
 			Object itemId = indexedContainer.addItem();
 			indexedContainer.getContainerProperty(itemId, NAME_COLUMN_ID).setValue(fieldNameData[i]);
 			indexedContainer.getContainerProperty(itemId, AGE_COLUMN_ID).setValue(new Random().nextInt(100));
-			indexedContainer.getContainerProperty(itemId, DATE_COLUMN_ID).setValue(new Date());			
+			indexedContainer.getContainerProperty(itemId, DATE_COLUMN_ID).setValue(new Date((new Random().nextInt(1000)*60*60*24*365*50 + new Date().getTime() - 1000*60*60*24*365*50))); // random Date between now + or - 50 years.		
 		}
 		
 		return indexedContainer;

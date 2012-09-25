@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.vaadin.data.Container.Filterable;
 import com.vaadin.data.util.IndexedContainer;
+import com.vaadin.data.util.filter.Like;
 import com.vaadin.data.util.filter.SimpleStringFilter;
 import com.vaadin.event.FieldEvents.TextChangeEvent;
 import com.vaadin.event.FieldEvents.TextChangeListener;
@@ -15,47 +16,44 @@ import com.vaadin.ui.VerticalLayout;
 
 /**
  * 
- * This example shows the use of two {@link SimpleStringFilter}s on separate columns in a {@link Table} with and {@link IndexedContainer}
+ * This example shows the basic use of a {@link SimpleStringFilter} on a {@link Table} with and {@link IndexedContainer}
  * 
  */
-public class DoubleSimpleStringFilterTableExample extends CustomComponent {
-	private static final long serialVersionUID = 8903778701375018306L;
+public class BasicLikeFilterTableExample extends CustomComponent {
+	private static final long serialVersionUID = -2118302821848406044L;
 
 	private static String NAME_COLUMN_ID = "name";
 	private static String AGE_COLUMN_ID = "age";
 	private static String DATE_COLUMN_ID = "date";
 
 	private TextField nameField;
-	private TextField ageField;
-	private Table filterTable;
+	private Table basicFilterTable;
 	
 	/**
 	 * 
-	 * Create a name filter field, an age filter field and the table to be filtered; add them in a vertical layout to the composition root.
+	 * Create name filter field and the table to be filtered and add them in a vertical layout to the composition root.
 	 * 
 	 */
-	public DoubleSimpleStringFilterTableExample() {
+	public BasicLikeFilterTableExample() {
 		VerticalLayout vLayout = new VerticalLayout();
 		
 		createNameFilterField();		
-		createAgeFilterField();		
 		createTable();
 
 		vLayout.addComponent(nameField);
-		vLayout.addComponent(ageField);
-		vLayout.addComponent(filterTable);		
+		vLayout.addComponent(basicFilterTable);		
 		setCompositionRoot(vLayout);
 	}
 
 	private void createTable() {
-		filterTable = new Table();
-		filterTable.setContainerDataSource(createExampleData());
+		basicFilterTable = new Table();
+		basicFilterTable.setContainerDataSource(createExampleData());
 	}
 
 	/**
 	 * 
-	 * Create a {@link TextField} which attaches a {@link SimpleStringFilter} to a {@link Table} based on text changed in the {@link TextField}.
-	 * The filter is applied to the NAME_COLUMN_ID column, is case-insensitive and matches on a table cell containing a specified string.
+	 * Create a {@link TextField} which attaches a {@link Like} conditional filter to a {@link Table} based on text changed in the {@link TextField}.
+	 * The filter is applied to the NAME_COLUMN_ID column and matches on a table cell based on a like condition "%".
 	 * 
 	 */
 	private void createNameFilterField() {
@@ -63,47 +61,21 @@ public class DoubleSimpleStringFilterTableExample extends CustomComponent {
 		nameField.addListener(new TextChangeListener() {
 			private static final long serialVersionUID = -2394671950449799553L;
 			
-			SimpleStringFilter simpleStringFilter = null;
+			Like likeFilter = null;
 			
 			public void textChange(TextChangeEvent textChangeEvent) {
-				Filterable filterable = (Filterable) filterTable.getContainerDataSource();
+				Filterable filterable = (Filterable) basicFilterTable.getContainerDataSource();
 				
-				if (simpleStringFilter != null) {
-					filterable.removeContainerFilter(simpleStringFilter);
+				if (likeFilter != null) {
+					filterable.removeContainerFilter(likeFilter);
 				}
 				
-				simpleStringFilter = new SimpleStringFilter(NAME_COLUMN_ID, textChangeEvent.getText(), true, false);
-				filterable.addContainerFilter(simpleStringFilter);
+				likeFilter = new Like(NAME_COLUMN_ID, textChangeEvent.getText());
+				filterable.addContainerFilter(likeFilter);
 			}
 		});	
 	}
-
-	/**
-	 * 
-	 * Create a {@link TextField} which attaches a {@link SimpleStringFilter} to a {@link Table} based on text changed in the {@link TextField}.
-	 * The filter is applied to the AGE_COLUMN_ID column, is case-insensitive and matches on a table cell containing a specified string.
-	 * 
-	 */
-	private void createAgeFilterField() {
-		ageField = new TextField("Age Filter");
-		ageField.addListener(new TextChangeListener() {
-			private static final long serialVersionUID = -2394671950449799553L;
-			
-			SimpleStringFilter simpleStringFilter = null;
-			
-			public void textChange(TextChangeEvent textChangeEvent) {
-				Filterable filterable = (Filterable) filterTable.getContainerDataSource();
-				
-				if (simpleStringFilter != null) {
-					filterable.removeContainerFilter(simpleStringFilter);
-				}
-				
-				simpleStringFilter = new SimpleStringFilter(AGE_COLUMN_ID, textChangeEvent.getText(), true, false);
-				filterable.addContainerFilter(simpleStringFilter);
-			}
-		});	
-	}
-
+	
 	/**
 	 * 
 	 * Creates a {@link IndexedContainer} with three columns of type String, Integer and Date as example data.
@@ -129,5 +101,5 @@ public class DoubleSimpleStringFilterTableExample extends CustomComponent {
 		}
 		
 		return indexedContainer;
-	}	
+	}
 }
