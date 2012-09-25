@@ -31,7 +31,7 @@ Now you can `import` the project into eclipse by :
 
 `import > general > Existing Projects into workspace`
 
-For all the other vaadin example use the same procedure.
+For all the other vaadin examples use the same procedure.
 
 ### VaadingFilteringTable
 
@@ -53,5 +53,7 @@ Different Containers
 
 Basic usage of a Filter
 
-- `BasicFilterTableExample` : A Textfield to filter a table (on one column) while typing.
+- `BasicSimpleStringFilterTableExample` : A Textfield to filter a table (on one column) while typing.
+- `DoubleSimpleStringFilterTableExample` : Two Textfields to filter a table (on two columns) while typing in those two Textfields.
+- `BasicCustomFilterTableExample` : A Custom Filter example resulting in a Textfield accepting a Regular Expression to filter a table (on one column) while typing.
 
