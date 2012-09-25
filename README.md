@@ -58,3 +58,6 @@ Basic usage of a Filter
 - `BasicCustomFilterTableExample` : A Custom filter example resulting in a Textfield accepting a Regular Expression to filter a table (on one column) while typing.
 - `BasicLikeFilterTableExample` : A Textfield with a Like filter to filter a table (on one column) while typing a String or a wildcard of type "%".
 - `BasicGreaterAndLessFilterTableExample` : A Textfield with a Greater filter to filter a table (on one column) on an (column with an) integer value greater than the entered value. When no integer provided use a Less filter to empty the table. 
+- `BasicBetweenFilterTableExample` : Two Textfields to filter a table (on one columns) using a Between filter to filter between two values while typing into the first Textfield. The second Textfield determines the second value in the range, but is unresponsive to typing as input for the filter.
+
+

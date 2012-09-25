@@ -4,6 +4,7 @@ import nl.example.vaadin.table.container.BasicBeanContainerTableExample;
 import nl.example.vaadin.table.container.BasicBeanItemContainerTableExample;
 import nl.example.vaadin.table.container.BasicFilesystemContainerTableExample;
 import nl.example.vaadin.table.container.BasicIndexedContainerTableExample;
+import nl.example.vaadin.table.filter.BasicBetweenFilterTableExample;
 import nl.example.vaadin.table.filter.BasicCustomFilterTableExample;
 import nl.example.vaadin.table.filter.BasicGreaterAndLessFilterTableExample;
 import nl.example.vaadin.table.filter.BasicLikeFilterTableExample;
@@ -21,6 +22,9 @@ public class TableApplication extends Application {
 	@Override
 	public void init() {
 		Window mainWindow = new Window("TableApplication");
+
+		mainWindow.addComponent(new Label("Between Filter Table"));
+		mainWindow.addComponent(new BasicBetweenFilterTableExample());
 
 		mainWindow.addComponent(new Label("Greater Than Filter Table"));
 		mainWindow.addComponent(new BasicGreaterAndLessFilterTableExample());
