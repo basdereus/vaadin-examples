@@ -13,7 +13,14 @@ import com.vaadin.ui.Table;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 
-public class BasicFilterTableExample extends CustomComponent {
+/**
+ * 
+ * @author b.dereus
+ *
+ * This example shows the basic use of a {@link SimpleStringFilter} on a {@link Table} with and {@link IndexedContainer}
+ * 
+ */
+public class BasicSimpleStringFilterTableExample extends CustomComponent {
 	private static final long serialVersionUID = -2118302821848406044L;
 
 	private static String NAME_COLUMN_ID = "name";
@@ -28,7 +35,7 @@ public class BasicFilterTableExample extends CustomComponent {
 	 * Create name filter field and the table to be filtered and add them in a vertical layout to the composition root.
 	 * 
 	 */
-	public BasicFilterTableExample() {
+	public BasicSimpleStringFilterTableExample() {
 		VerticalLayout vLayout = new VerticalLayout();
 		
 		createNameFilterField();		
@@ -44,6 +51,12 @@ public class BasicFilterTableExample extends CustomComponent {
 		basicFilterTable.setContainerDataSource(createExampleData());
 	}
 
+	/**
+	 * 
+	 * Create a {@link TextField} which attaches a {@link SimpleStringFilter} to a {@link Table} based on text changed in the textfield.
+	 * The filter is applied to the NAME_COLUMN_ID column, ignores case of the text and matches on substring inside a string.
+	 * 
+	 */
 	private void createNameFilterField() {
 		nameField = new TextField("Name Filter");
 		nameField.addListener(new TextChangeListener() {

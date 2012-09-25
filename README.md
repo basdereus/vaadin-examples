@@ -5,7 +5,15 @@ Vaadin is a Java Web Application Framework based on GWT (Google Web Toolkit) for
 This repository provides examples of certain component/techniques used in Vaadin.
 All projects contain `gradle.build` files to setup separate eclipse web application projects.
 
-Examples use Vaadin 6.8.2 and Java 1.6
+Note: This page is under construction which means that it may change regularly.
+
+Examples use 
+- Java 1.6
+- Vaadin 6.8.2
+- Gradle 1.0
+- Git 1.7.9.mysysgit.0 
+- Eclipse Indigo SR2 JEE (64bit)
+- Windows 7 (64bit)
 
 ## Examples
 
@@ -19,11 +27,11 @@ To build and create a war file, run :
 
 `gradle build`
 
-Now `import` the project into eclipse by :
+Now you can `import` the project into eclipse by :
 
 `import > general > Existing Projects into workspace`
 
-For all the other vaadin example use the same procedure
+For all the other vaadin example use the same procedure.
 
 ### VaadingFilteringTable
 
@@ -33,7 +41,7 @@ Still an empty shell (later in progress).
 
 Example for usage of the Vaadin `Table` component. 
 
-All example are made in a custom component.
+All examples take a single concept to work out in a custom component. Code of these components are as much decoupled working instances for educational purposes. All custom components are attached to the root application to be show on startup.
 
 Different Containers
 
