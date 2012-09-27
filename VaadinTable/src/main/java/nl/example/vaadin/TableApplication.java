@@ -10,6 +10,7 @@ import nl.example.vaadin.table.filter.BasicGreaterAndLessFilterTableExample;
 import nl.example.vaadin.table.filter.BasicLikeFilterTableExample;
 import nl.example.vaadin.table.filter.BasicSimpleStringFilterTableExample;
 import nl.example.vaadin.table.filter.DoubleSimpleStringFilterTableExample;
+import nl.example.vaadin.table.filter.combobox.BasicComboBoxFilterTableExample;
 
 import com.vaadin.Application;
 import com.vaadin.ui.Label;
@@ -22,6 +23,9 @@ public class TableApplication extends Application {
 	@Override
 	public void init() {
 		Window mainWindow = new Window("TableApplication");
+
+		mainWindow.addComponent(new Label("ComboBox Filter Table"));
+		mainWindow.addComponent(new BasicComboBoxFilterTableExample());
 
 		mainWindow.addComponent(new Label("Between Filter Table"));
 		mainWindow.addComponent(new BasicBetweenFilterTableExample());
