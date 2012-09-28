@@ -60,5 +60,6 @@ Basic usage of a Filter
 - `BasicGreaterAndLessFilterTableExample` : A Textfield with a Greater filter to filter a table (on one column) on an (column with an) integer value greater than the entered value. When no integer provided use a Less filter to empty the table. 
 - `BasicBetweenFilterTableExample` : Two Textfields to filter a table (on one columns) using a Between filter to filter between two values while typing into the first Textfield. The second Textfield determines the second value in the range, but is unresponsive to typing as input for the filter.
 - `BasicComboBoxFilterTableExample` : A NativeSelect (combobox) to filter a table (on one column) based on unique values in a column. An extra 'Show All' items, removes all filters.
+- `BasicGridColumnsTableExample` : A NativeSelect (combobox) and two Textfields in a grid above the table to filter a table (on one column).
 
 
