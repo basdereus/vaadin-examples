@@ -18,7 +18,7 @@ import com.vaadin.ui.PopupDateField;
 import com.vaadin.ui.Table;
 import com.vaadin.ui.VerticalLayout;
 
-public class BasicDateFilterTableExample extends CustomComponent {
+public class BasicDayFilterTableExample extends CustomComponent {
 	private static final long serialVersionUID = 2674129139867513711L;
 
 	private static String NAME_COLUMN_ID = "name";
@@ -28,7 +28,7 @@ public class BasicDateFilterTableExample extends CustomComponent {
 	private PopupDateField popupDateField;
 	private Table basicFilterTable;
 	
-	public BasicDateFilterTableExample() {
+	public BasicDayFilterTableExample() {
 		VerticalLayout vLayout = new VerticalLayout();
 		
 		createDateFilterField();

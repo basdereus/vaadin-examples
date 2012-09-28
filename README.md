@@ -54,7 +54,7 @@ Different Containers
 Basic usage of a Filter
 
 - `BasicSimpleStringFilterTableExample` : A Textfield to filter a table (on one column) while typing based on the entered String.
-- `BasicDateFilterTableExample` : A PopupDateField to filter a table (on one column) while changing date field by means of the date picker popup.
+- `BasicDayFilterTableExample` : A PopupDateField to filter a table (on one column) on day while changing the date field value by means of the date picker popup (selecting a day from a calendar).
 - `DoubleSimpleStringFilterTableExample` : Two Textfields to filter a table (on two columns) while typing those two Textfields.
 - `BasicCustomFilterTableExample` : A Custom filter example resulting in a Textfield accepting a Regular Expression to filter a table (on one column) while typing.
 - `BasicLikeFilterTableExample` : A Textfield with a Like filter to filter a table (on one column) while typing a String or a wildcard of type "%".

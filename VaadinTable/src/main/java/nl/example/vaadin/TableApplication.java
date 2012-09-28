@@ -6,7 +6,7 @@ import nl.example.vaadin.table.container.BasicFilesystemContainerTableExample;
 import nl.example.vaadin.table.container.BasicIndexedContainerTableExample;
 import nl.example.vaadin.table.filter.BasicBetweenFilterTableExample;
 import nl.example.vaadin.table.filter.BasicCustomFilterTableExample;
-import nl.example.vaadin.table.filter.BasicDateFilterTableExample;
+import nl.example.vaadin.table.filter.BasicDayFilterTableExample;
 import nl.example.vaadin.table.filter.BasicGreaterAndLessFilterTableExample;
 import nl.example.vaadin.table.filter.BasicLikeFilterTableExample;
 import nl.example.vaadin.table.filter.BasicSimpleStringFilterTableExample;
@@ -28,7 +28,7 @@ public class TableApplication extends Application {
 		
 
 		mainWindow.addComponent(new Label("Date Filter Table"));
-		mainWindow.addComponent(new BasicDateFilterTableExample());
+		mainWindow.addComponent(new BasicDayFilterTableExample());
 
 		mainWindow.addComponent(new Label("Grid Columns Table"));
 		mainWindow.addComponent(new GridColumnFiltersTableExample());
