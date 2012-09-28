@@ -54,12 +54,13 @@ Different Containers
 Basic usage of a Filter
 
 - `BasicSimpleStringFilterTableExample` : A Textfield to filter a table (on one column) while typing based on the entered String.
+- `BasicDateFilterTableExample` : A PopupDateField to filter a table (on one column) while changing date field by means of the date picker popup.
 - `DoubleSimpleStringFilterTableExample` : Two Textfields to filter a table (on two columns) while typing those two Textfields.
 - `BasicCustomFilterTableExample` : A Custom filter example resulting in a Textfield accepting a Regular Expression to filter a table (on one column) while typing.
 - `BasicLikeFilterTableExample` : A Textfield with a Like filter to filter a table (on one column) while typing a String or a wildcard of type "%".
 - `BasicGreaterAndLessFilterTableExample` : A Textfield with a Greater filter to filter a table (on one column) on an (column with an) integer value greater than the entered value. When no integer provided use a Less filter to empty the table. 
 - `BasicBetweenFilterTableExample` : Two Textfields to filter a table (on one columns) using a Between filter to filter between two values while typing into the first Textfield. The second Textfield determines the second value in the range, but is unresponsive to typing as input for the filter.
 - `BasicComboBoxFilterTableExample` : A NativeSelect (combobox) to filter a table (on one column) based on unique values in a column. An extra 'Show All' items, removes all filters.
-- `BasicGridColumnsTableExample` : A NativeSelect (combobox) and two Textfields in a grid above the table to filter a table (on one column).
+- `GridColumnFiltersTableExample` : A NativeSelect (combobox) and two Textfields in a grid above the table to filter a table (on one column).
 
 

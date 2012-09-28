@@ -20,7 +20,12 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.Runo;
 
-public class BasicGridColumnsTableExample extends CustomComponent {
+/**
+ * 
+ * This example shows the basic use of a {@link GridLayout} with one {@link NativeSelect} and two {@link SimpleStringFilter} fields to filter on a {@link Table} with and {@link IndexedContainer}
+ * 
+ */
+public class GridColumnFiltersTableExample extends CustomComponent {
 	private static final long serialVersionUID = 5766280152862650111L;
 
 	private static String NAME_COLUMN_ID = "name";
@@ -36,7 +41,7 @@ public class BasicGridColumnsTableExample extends CustomComponent {
 	private static TextField dateField;
 	private static Table indexedContainerTable; 
 
-	public BasicGridColumnsTableExample() {
+	public GridColumnFiltersTableExample() {
 		VerticalLayout vLayout = new VerticalLayout();
 		vLayout.setSizeUndefined();
 
@@ -79,6 +84,10 @@ public class BasicGridColumnsTableExample extends CustomComponent {
 		return indexedContainer;
 	}
 
+	/**
+	 * Creates a {@link Panel} with a {@link GridLayout} and adds filter fields to it.
+	 * 
+	 */
 	private static Panel createFilterFieldGrid() {
 		Panel filterFieldGrid = new Panel();
 		filterFieldGrid.setStyleName(Runo.PANEL_LIGHT);
@@ -173,7 +182,7 @@ public class BasicGridColumnsTableExample extends CustomComponent {
 	/**
 	 * 
 	 * Create a {@link TextField} which attaches a {@link SimpleStringFilter} to a {@link Table} based on text changed in the {@link TextField}.
-	 * The filter is applied to the NAME_COLUMN_ID column, is case-insensitive and matches on a table cell containing a specified string.
+	 * The filter is applied to the DATE_COLUMN_ID column, is case-insensitive and matches on a table cell containing a specified string.
 	 * 
 	 */
 	private static void createDateFilterField() {

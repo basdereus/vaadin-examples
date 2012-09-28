@@ -12,4 +12,5 @@ sourceCompatibility = 1.6
     
 dependencies {
 	compile "com.vaadin:vaadin:6.8.2"
+  compile "org.apache.commons:commons-lang3:3.1"
 }

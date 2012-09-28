@@ -6,12 +6,13 @@ import nl.example.vaadin.table.container.BasicFilesystemContainerTableExample;
 import nl.example.vaadin.table.container.BasicIndexedContainerTableExample;
 import nl.example.vaadin.table.filter.BasicBetweenFilterTableExample;
 import nl.example.vaadin.table.filter.BasicCustomFilterTableExample;
+import nl.example.vaadin.table.filter.BasicDateFilterTableExample;
 import nl.example.vaadin.table.filter.BasicGreaterAndLessFilterTableExample;
 import nl.example.vaadin.table.filter.BasicLikeFilterTableExample;
 import nl.example.vaadin.table.filter.BasicSimpleStringFilterTableExample;
 import nl.example.vaadin.table.filter.DoubleSimpleStringFilterTableExample;
 import nl.example.vaadin.table.filter.combobox.BasicComboBoxFilterTableExample;
-import nl.example.vaadin.table.filter.grid.BasicGridColumnsTableExample;
+import nl.example.vaadin.table.filter.grid.GridColumnFiltersTableExample;
 
 import com.vaadin.Application;
 import com.vaadin.ui.Label;
@@ -23,11 +24,14 @@ public class TableApplication extends Application {
 	
 	@Override
 	public void init() {
-		setTheme("chameleon");
 		Window mainWindow = new Window("TableApplication");
+		
+
+		mainWindow.addComponent(new Label("Date Filter Table"));
+		mainWindow.addComponent(new BasicDateFilterTableExample());
 
 		mainWindow.addComponent(new Label("Grid Columns Table"));
-		mainWindow.addComponent(new BasicGridColumnsTableExample());
+		mainWindow.addComponent(new GridColumnFiltersTableExample());
 
 		mainWindow.addComponent(new Label("ComboBox Filter Table"));
 		mainWindow.addComponent(new BasicComboBoxFilterTableExample());
